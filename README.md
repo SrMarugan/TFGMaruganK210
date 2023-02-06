@@ -60,7 +60,31 @@ if per > 1:
   img=img.draw_string(10, 10, "Persons: %d" %(per), scale=2)
 ```
 
+![image](https://user-images.githubusercontent.com/115635629/217075340-3dc93bed-5872-4957-a726-68cd609fc411.png)
 
-Also I put a 8 segment to see that number in a board that doesn't have a LCD. You can see this code in the repository.
+Here is an example of how the IA knows the number of persons and show us. The entire code is in the repository as **count_persons.py** Know we can experiment with some different images or make more things. I show you what I do in my TFG and I explain how did I get it. 
 
-To code the 8 segment we have to use the GPIO of the board. With the dependencies of function fpio_manager we import fm. Now we can change the differents pins to use as GPIO or others protocols as I2C, SPI, I2S, or UART. Very interesting to communicate with other devices.
+# 8 Segment and FPIO Manager
+
+I put a 8 segment to see that number in a board that doesn't have a LCD. Can see in the image a 8 segment display in a Sipeed Maix Bit board.
+
+![Display](https://user-images.githubusercontent.com/115635629/217081788-0071a141-a736-4fd1-8a7a-58187344ad06.jpg)
+
+
+To code the 8 segment we have to use the GPIO of the board. FPIOA (Field Programmable Input and Output Array) make a mapping of the physical pins into a type of pin we want to use, for example the traditional GPIO (General Purpose Input Output) or his varient GPIOHS (GPIO High Speed). Using the dependencies from fpio_manager we import fm, to this form we can change the differents pins to use as GPIO or others protocols as I2C, SPI, I2S, or UART, all of them very interesting to communicate with other devices. 
+
+If we want to make the pin 33 into a normal GPIO to put a LED we have to include the dependencies from fpio_manager as we can see in this example code.
+
+```
+from fpioa_manager import fm
+
+fm.register(33,fm.fpioa.GPIO1)
+led = GPIO(GPIO.GPIO1,GPIO.OUT)
+```
+
+In a 8 segment display every segment is like an individual LED, we program each number like a combination of ON and OFF LEDs. Then when we recognise the number of persons with the previous code we can select the correspondent segments ON and OFF to show us the number of persons. 
+
+The Sipeed Maix Bit don't need a LCD if we only wants to know the number of persons that are in the area of the camera sensor. The entire code are in the repository as **count_persons_display.py**
+
+If you want to learn more about the fpioa you can consult the API Reference page of Sipeed https://wiki.sipeed.com/soft/maixpy/en/api_reference/Maix/fpioa.html It's important read the documentation first, because there are pins reserved, like the camera and LCD, or busy by others. Also we have an Appendix with a peripheral table that shows us the differents peripheral functions and his name.
+
