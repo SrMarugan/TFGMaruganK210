@@ -39,13 +39,13 @@ If you download that examples I recommend save it in the directory Documents/Mai
 Now if we go to machine_vision/models we can find three models that we can burn into the board
 
 # Find Face
-Burn the model face_model_at_0x300000.kfpkg using kflash select the addres 0x300000. Then in the MaixPy IDE load the code machine_vision\face_find/demo_find_face.py
+Burn the model face_model_at_0x300000.kfpkg using kflash, select the addres 0x300000. Then in the MaixPy IDE load the code machine_vision\face_find/demo_find_face.py
 
 ![Capture2](https://user-images.githubusercontent.com/115635629/217023982-c20c48a7-bcad-42c7-a704-a8c3404bcfcb.png)
 
 We see that the code execute the model of face recognition, and identify by the camera if there are somebody. When it recognize somebody it puts a white rectangle around the face. We can see an example in the last capture.
 
-I edit that code to count the number of persons that are in the snapshot. Then it prints the number of persons in the image of the LCD. To make it we put a counter in the function that puts the rectangle in the people. Then we evaluate what number of persons are, if there is anybody we show "There are no persons", if there is somebody we show "1 person" and if there are more tha 1 person we show the exact number. We puts some conditionals to evaluate the number of persons to doing the code less dumb.
+I edit that code to count the number of persons that are in the snapshot. Then it prints the number of persons in the image of the LCD. To make it we put a counter in the function that puts the rectangle in the people. Then we evaluate what number of persons are, if there is anybody we show "There are no persons", if there is somebody we show "1 person" and if there are more than 1 person we show the exact number. We puts some conditionals to evaluate the number of persons to doing the code less dumb.
 
 ```
 if objects:
