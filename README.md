@@ -88,3 +88,28 @@ The Sipeed Maix Bit don't need a LCD if we only wants to know the number of pers
 
 If you want to learn more about the fpioa you can consult the API Reference page of Sipeed https://wiki.sipeed.com/soft/maixpy/en/api_reference/Maix/fpioa.html It's important read the documentation first, because there are pins reserved, like the camera and LCD, or busy by others. Also we have an Appendix with a peripheral table that shows us the differents peripheral functions and his name.
 
+# Arduino and ESP32 (Wi-Fi)
+Now we use Arduino to use an antenna Wi-Fi. Why don't use MaixPy IDE? Because don't work the libraries and I prove in Arduino and works perfectly, but it's more difficult and we have to configure well our ArduinoIDE to work correctly.
+
+First of all download and install the ArduinoIDE from https://www.arduino.cc/en/software
+
+We have to install the libraries and configure the IDE to admit the Sipeed boards
+* Open ArduinoIDE, select **Archive** -> **Preferences**
+* Add in **Additional Boards Manager URLs**: http://dl.sipeed.com/MAIX/Maixduino/package_Maixduino_k210_index.json
+* Select **Tools** -> **Board** -> **Boards Manager**, search Maixduino, click Install
+* When we click on **Board** it has to be multiple boards of Sipeed
+
+![imagen](https://user-images.githubusercontent.com/115635629/217244238-d4cf4e7e-13da-4b77-93eb-2c9e197c7610.png)
+
+We have to change board settings to:
+* Board: Sipeed Maix Go Board
+* Burn Tool Firmware: open-ec
+* Burn Baud Rate: 2Mbps
+* Port: We select the connected board’s port
+* Programmer: k-flash
+
+![imagen](https://user-images.githubusercontent.com/115635629/217244527-51560d53-88bb-46a3-be76-d50fa27aaa2a.png)
+
+We need a Sipeed board that have the WiFi antenna, in my case I have the kit of Sipeed Maix Go, with a LCD, an antenna and a little battery. Actually it's impossible acquire one, I hope in the future we can buy someone
+
+![imagen](https://user-images.githubusercontent.com/115635629/217246419-f917bd4f-a845-4562-9a93-532121ce01c1.png)
