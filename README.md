@@ -94,12 +94,14 @@ Now we use Arduino to use an antenna Wi-Fi. Why don't use MaixPy IDE? Because do
 First of all download and install the ArduinoIDE from https://www.arduino.cc/en/software
 
 We have to install the libraries and configure the IDE to admit the Sipeed boards
-* Open ArduinoIDE, select **Archive** -> **Preferences**
+* Open ArduinoIDE, select **File** -> **Preferences**
 * Add in **Additional Boards Manager URLs**: http://dl.sipeed.com/MAIX/Maixduino/package_Maixduino_k210_index.json
 * Select **Tools** -> **Board** -> **Boards Manager**, search Maixduino, click Install
 * When we click on **Board** it has to be multiple boards of Sipeed
 
-![imagen](https://user-images.githubusercontent.com/115635629/217244238-d4cf4e7e-13da-4b77-93eb-2c9e197c7610.png)
+![image](https://user-images.githubusercontent.com/115635629/218576978-9829c8b6-0a3f-408e-b387-67f3e0947d76.png)
+
+![image](https://user-images.githubusercontent.com/115635629/218577115-9b14701d-daee-4785-8186-0b64d0bb06c5.png)
 
 We have to change board settings to:
 * Board: Sipeed Maix Go Board
@@ -108,7 +110,7 @@ We have to change board settings to:
 * Port: We select the connected board’s port
 * Programmer: k-flash
 
-![imagen](https://user-images.githubusercontent.com/115635629/217244527-51560d53-88bb-46a3-be76-d50fa27aaa2a.png)
+![image](https://user-images.githubusercontent.com/115635629/218577675-25529f55-de8c-4328-ab10-7f54982a3b0c.png)
 
 We need a Sipeed board that have the WiFi antenna, in my case I have the kit of Sipeed Maix Go, with a LCD, an antenna and a little battery. Actually it's impossible acquire one, I hope in the future we can buy someone
 
