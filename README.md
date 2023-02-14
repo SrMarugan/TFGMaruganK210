@@ -112,6 +112,24 @@ We have to change board settings to:
 
 ![image](https://user-images.githubusercontent.com/115635629/218698006-e7e950e2-555f-4d7d-9955-29c85462e9bd.png)
 
-We need a Sipeed board that have the WiFi antenna, in my case I have the kit of Sipeed Maix Go, with a LCD, an antenna and a little battery. Actually it's impossible acquire one, I hope in the future we can buy someone
+If doesn't work here are some reasons that I find:
+- Install the older version (Arduino 1.x.x not Arduino 2.x.x)
+- Use the examples code and prove it, if it doesn't work configure correctly in boards settings (probably you didn't select the board's port)
+
+We need a Sipeed board that have the WiFi antenna, in my case I have the kit of Sipeed Maix Go, with a LCD, an antenna and a little battery. Actually it's impossible acquire one, I hope in the future we can buy someone. I worked only with the Sipeed Maix Go because I want connect with Wi-Fi the board and the only board that I have is the Sipeed Maix Go.
 
 ![imagen](https://user-images.githubusercontent.com/115635629/217246419-f917bd4f-a845-4562-9a93-532121ce01c1.png)
+
+Now I'm gonna show you some examples that I use to prove the board and how it connect via WiFi. In all of this case I use the WiFi of my phone or my house. In the college the WiFi has double verification with the account of mail of the university. If you are using the WiFi of the university or work probably you can't use all the ports or have some type of limitation.
+
+If you go to **File**->**Examples**->**WiFiEsp** you can see all the examples that works in the board Sipeed Maix Go
+
+![image](https://user-images.githubusercontent.com/115635629/218758677-f14b07ef-e776-4e57-ac13-ffe7ac094c65.png)
+
+The antenna it's connected to the pin 6 and 7 (RX and TX). You have to include a SSID and a password to connect into a WiFi net. The SSID it's the name of the WiFi net and the password obviously is the password of the WiFi, if the WiFi doesn't have a password you don't have to include a password in the code.
+
+```
+char ssid[] = "NameWiFi";            // your network SSID (name)
+char pass[] = "123456789";        // your network password
+```
+
