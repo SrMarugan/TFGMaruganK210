@@ -99,9 +99,9 @@ We have to install the libraries and configure the IDE to admit the Sipeed board
 * Select **Tools** -> **Board** -> **Boards Manager**, search Maixduino, click Install
 * When we click on **Board** it has to be multiple boards of Sipeed
 
-![image](https://user-images.githubusercontent.com/115635629/218576978-9829c8b6-0a3f-408e-b387-67f3e0947d76.png)
+![image](https://user-images.githubusercontent.com/115635629/218697426-f66b9f4e-9152-4f0e-bf70-8d339a434694.png)
 
-![image](https://user-images.githubusercontent.com/115635629/218577115-9b14701d-daee-4785-8186-0b64d0bb06c5.png)
+![image](https://user-images.githubusercontent.com/115635629/218697773-c3f052b8-1e3f-43f4-84ae-604b661f701a.png)
 
 We have to change board settings to:
 * Board: Sipeed Maix Go Board
@@ -110,7 +110,7 @@ We have to change board settings to:
 * Port: We select the connected board’s port
 * Programmer: k-flash
 
-![image](https://user-images.githubusercontent.com/115635629/218577675-25529f55-de8c-4328-ab10-7f54982a3b0c.png)
+![image](https://user-images.githubusercontent.com/115635629/218698006-e7e950e2-555f-4d7d-9955-29c85462e9bd.png)
 
 We need a Sipeed board that have the WiFi antenna, in my case I have the kit of Sipeed Maix Go, with a LCD, an antenna and a little battery. Actually it's impossible acquire one, I hope in the future we can buy someone
 
