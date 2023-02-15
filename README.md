@@ -133,3 +133,10 @@ char ssid[] = "NameWiFi";            // your network SSID (name)
 char pass[] = "123456789";        // your network password
 ```
 
+**Fix the error in camera.h**
+In the library camera.h there are an error in the line 79. You can fix that error deleting the line 79:
+```
+virtual void setRotation(uint8_t rotation) = 0;
+```
+
+If you do that the code that use camera.h works perfectly (I don't know why, but it works)
