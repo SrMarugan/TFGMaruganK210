@@ -140,3 +140,44 @@ virtual void setRotation(uint8_t rotation) = 0;
 ```
 
 If you do that the code that use camera.h works perfectly (I don't know why, but it works)
+
+
+# Training a model in TensorFlow
+First of all we install the anaconda environment from https://www.anaconda.com/
+Then open Anaconda Navigator and launch Jupiter Notebook
+
+![image](https://user-images.githubusercontent.com/115635629/219171276-c97e65b0-d4a7-4821-a322-5b56536ab012.png)
+
+Now create a conda working environment in the cmd or terminal of your computer
+
+```
+conda create --name <Name>
+```
+
+![image](https://user-images.githubusercontent.com/115635629/219172275-e83fea9f-8ca9-4204-bc83-c58ae5119ec2.png)
+
+Now with conda activate <Name> and conda deactivate you can change your working environment.
+Why we do that? Because when we are training a model we need the dependencies of tensorflow and more dependencies with a specific version or with the same name that others. With the conda environment you protect yourself from other types of versions of dependencies that you may work with if you usually code in python.
+  
+To open the new environment we use:
+  
+```
+conda activate <Name>
+```
+  
+As you can see in the capture I create the environtment in the Power Shell of Windows 11, but I use the cmd to work in the environment. If you are using Windows 10 you have to use the cmd. In Linux you can do the same but using the terminal.
+  
+Now install the dependencies of tensorflow using:
+```
+conda install tensorflow
+```
+  
+And the tensorflow datasets using:
+```
+pip install tensorflow-datasets
+```
+  
+To acces to this dependencies in the notebook we have to install ipywidgets using:
+```
+conda install -c conda-forge ipywidgets
+```
