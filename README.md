@@ -176,8 +176,17 @@ And the tensorflow datasets using:
 ```
 pip install tensorflow-datasets
 ```
-  
+
 To acces to this dependencies in the notebook we have to install ipywidgets using:
 ```
 conda install -c conda-forge ipywidgets
 ```
+
+Also I use some libraries to help me, you can install using:
+```
+pip install matplotlib
+pip install opencv-python
+```
+Remember you have to install in the conda environtment that you create and you have to activate everytime you reboot your computer or close the cmd program or terminal.
+
+
