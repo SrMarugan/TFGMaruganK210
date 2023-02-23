@@ -165,7 +165,7 @@ To open the new environment we use:
 conda activate <Name>
 ```
   
-As you can see in the capture I create the environtment in the Power Shell of Windows 11, but I use the cmd to work in the environment. If you are using Windows 10 you have to use the cmd. In Linux you can do the same but using the terminal.
+As you can see in the capture I create the environtment in the Power Shell of Windows 11, but I use the cmd to work in the environment. If you are using Windows 10 you have to use the cmd. In Linux you can do the same but using the terminal. In Mac the same that Linux.
   
 Now install the dependencies of tensorflow using:
 ```
@@ -182,11 +182,22 @@ To acces to this dependencies in the notebook we have to install ipywidgets usin
 conda install -c conda-forge ipywidgets
 ```
 
-Also I use some libraries to help me, you can install using:
+Also I use some libraries to help me in the visualization of the MNIST results predictions, you can install using:
 ```
 pip install matplotlib
 pip install opencv-python
 ```
-Remember you have to install in the conda environtment that you create and you have to activate everytime you reboot your computer or close the cmd program or terminal.
+Remember you have to install in the conda environtment that you create (use before **conda activate <Name>**) and you have to activate everytime you reboot your computer or close the cmd program/terminal.
 
+Now we're gonna create our own MNIST model using the datasets of tensorflow. I create it with two differents forms, using the tensorflow datasets and keras datasets. The difference? I don't know, but the tensorflows datasets needs more preprocessing before we train it. I load the two codes in the repository, but we have to see how it works.
 
+Add libraries and dependencies:
+```
+import tensorflow as tf
+import tensorflow_datasets as tfds
+import numpy as np
+import matplotlib.pyplot as plt
+import cv2 as cv
+```
+
+It's very important the first two dependencies, without them we can't train our model. Remember if you don't have install you have to do it, how?, I explain that in the beginning.
